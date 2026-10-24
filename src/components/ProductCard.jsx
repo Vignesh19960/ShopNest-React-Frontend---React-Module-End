@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
         <p className="eyebrow">{product.category || 'Featured'}</p>
         <h3><Link to={`/products/${product.id}`}>{product.title || product.name}</Link></h3>
         {product.rating?.rate && <p className="rating">★ {product.rating.rate} <span>({product.rating.count || 0} reviews)</span></p>}
-        <div className="product-card-bottom"><strong>${Number(product.price || 0).toFixed(2)}</strong><button className="icon-button" onClick={() => addToCart(product)} aria-label="Add to cart">＋</button></div>
+        <div className="product-card-bottom"><strong>Rs. {Number(product.price || 0).toFixed(2)}</strong><button className="icon-button" onClick={() => addToCart(product)} aria-label="Add to cart">＋</button></div>
       </div>
     </article>
   )
